@@ -1,0 +1,229 @@
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting box-sizing to border-box for all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Basic styling for player profiles */
+.player-profile {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.player-profile h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.player-profile p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.player-profile table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.player-profile th,
+.player-profile td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.player-profile th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.player-profile tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.player-profile tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Styling for player roles */
+.player-role {
+    font-weight: bold;
+    color: #007bff; /* Blue color */
+}
+
+/* Styling for auction price */
+.auction-price {
+    font-weight: bold;
+    color: #28a745; /* Green color */
+}
+
+/* Styling for player nationality */
+.player-nationality {
+    font-style: italic;
+    color: #dc3545; /* Red color */
+}
+
+/* Styling for retained player label */
+.retained-player {
+    background-color: #ffc107; /* Yellow color */
+    color: #333;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Styling for ruled out player label */
+.ruled-out-player {
+    background-color: #dc3545; /* Red color */
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Styling for the container of player profiles */
+.player-profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .player-profile {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Custom CSS for the news card */
+.card {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    padding: 10px;
+    font-size: 0.8rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+#news-updates .card {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#news-updates .card-header {
+    
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#news-updates .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#news-updates .card-body {
+    padding: 20px;
+}
+
+#news-updates .card-footer {
+    background-color: #E2E8F0;
+    color: #4A5568;
+    font-size: 0.8rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 767px) {
+    #news-updates .card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Fan Zone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">IPL Fan Zone</a>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" >Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html" >Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html" >Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Live Score.html">Live Scores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content Section -->
+    <div class="container mt-4">
+        <!-- Main Heading -->
+        <h1 class="text-center mb-4">Welcome to IPL Fan Zone!</h1>
+  
+        <!-- Live Scores -->
+       
+        
+        <!-- Match Schedule -->
+        <section id="match-schedule" class="mt-5">
+            <h2 class="text-center mb-3">Match Schedule</h2>
+            <div class="col-md-6 mb-3">
+                <label for="teamFilter" class="form-label">Filter by Team:</label>
+                <select class="form-select" id="teamFilter">
+                    <option value="All">All Teams</option>
+                    <option value="CSK">CSK</option>
+                    <option value="RCB">RCB</option>
+                    <option value="PBKS">PBKS</option>
+                    <option value="DC">DC</option>
+                    <option value="KKR">KKR</option>
+                    <option value="SRH">SRH</option>
+                    <option value="LSG">LSG</option>
+                    <option value="MI">MI</option>
+                    <option value="GT">GT</option>
+                </select>
+            </div>
+            <!-- Filter dropdowns -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="venueFilter" class="form-label">Filter by Venue:</label>
+                    <select class="form-select" id="venueFilter">
+                        <option value="All">All Venues</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Mohali">Mohali</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Dharamsala">Dharamsala</option>
+                        <option value="Guwahati">Guwahati</option>
+                    </select>
+                </div>
+        </div>
+        <button id="filterBtn" class="btn btn-primary">Filter</button>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match No</th>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Match</th>
+                            <th>Time (IST)</th>
+                            <th>Venue</th>
+                            <th>Result</th> <!-- Added column for result -->
+                        </tr>
+                    </thead>
+                    <tbody id="match-schedule-content">
+                        <!-- Match schedule data goes here -->
+                        <!-- Example row: -->
+                        <tr>
+                            <td>1</td>
+                            <td>Fri</td>
+                            <td>22-03-2024</td>
+                            <td>CSK vs RCB</td>
+                            <td>8:00 PM</td>
+                            <td>Chennai</td>
+                            <td>Chennai Super Kings won by 6 wkts</td> <!-- Example result -->
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sat</td>
+                            <td>23-03-2024</td>
+                            <td>PBKS vs DC</td>
+                            <td>3:30 PM</td>
+                            <td>Mohali</td>
+                            <td>Punjab Kings won by 4 wkts</td> <!-- Empty result section -->
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sat</td>
+                            <td>23-03-2024</td>
+                            <td>KKR vs SRH</td>
+                            <td>7:30 PM</td>
+                            <td>Kolkata</td>
+                            <td>Kolkata Knight Riders won by 4 runs</td> <!-- Empty result section -->
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Sun</td>
+                            <td>24-03-2024</td>
+                            <td>RR vs LSG</td>
+                            <td>3:30 PM</td>
+                            <td>Jaipur</td>
+                            <td>Rajasthan Royals won by 20 runs</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Sun</td>
+                            <td>24-03-2024</td>
+                            <td>GT vs MI</td>
+                            <td>7:30 PM</td>
+                            <td>Ahmedabad</td>
+                            <td>Gujarat Titans won by 6 runs</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mon</td>
+                            <td>25-03-2024</td>
+                            <td>RCB vs PBKS</td>
+                            <td>7:30 PM</td>
+                            <td>Bengaluru</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Tue</td>
+                            <td>26-03-2024</td>
+                            <td>CSK vs GT</td>
+                            <td>7:30 PM</td>
+                            <td>Chennai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Wed</td>
+                            <td>27-03-2024</td>
+                            <td>SRH vs MI</td>
+                            <td>7:30 PM</td>
+                            <td>Hyderabad</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Thu</td>
+                            <td>28-03-2024</td>
+                            <td>RR vs DC</td>
+                            <td>7:30 PM</td>
+                            <td>Jaipur</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Fri</td>
+                            <td>29-03-2024</td>
+                            <td>RCB vs KKR</td>
+                            <td>7:30 PM</td>
+                            <td>Bengaluru</td>
+                            <td></td>
+                        </tr>
+                       <tr>
+                            <td>11</td>
+                            <td>Sat</td>
+                            <td>30-03-2024</td>
+                            <td>LSG vs PBKS</td>
+                            <td>7:30 PM</td>
+                            <td>Lucknow</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Sun</td>
+                            <td>31-03-2024</td>
+                            <td>GT vs SRH</td>
+                            <td>3:30 PM</td>
+                            <td>Ahmedabad</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Sun</td>
+                            <td>31-03-2024</td>
+                            <td>DC vs CSK</td>
+                            <td>7:30 PM</td>
+                            <td>Visakhapatnam</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Mon</td>
+                            <td>01-04-2024</td>
+                            <td>MI vs RR</td>
+                            <td>7:30 PM</td>
+                            <td>Mumbai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Tue</td>
+                            <td>02-04-2024</td>
+                            <td>RCB vs LSG</td>
+                            <td>7:30 PM</td>
+                            <td>Bengaluru</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Wed</td>
+                            <td>03-04-2024</td>
+                            <td>DC vs KKR</td>
+                            <td>7:30 PM</td>
+                            <td>Visakhapatnam</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Thu</td>
+                            <td>04-04-2024</td>
+                            <td>GT vs PBKS</td>
+                            <td>7:30 PM</td>
+                            <td>Ahmedabad</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Fri</td>
+                            <td>05-04-2024</td>
+                            <td>SRH vs CSK</td>
+                            <td>7:30 PM</td>
+                            <td>Hyderabad</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Sat</td>
+                            <td>06-04-2024</td>
+                            <td>RR vs RCB</td>
+                            <td>7:30 PM</td>
+                            <td>Jaipur</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Sun</td>
+                            <td>07-04-2024</td>
+                            <td>MI vs DC</td>
+                            <td>3:30 PM</td>
+                            <td>Mumbai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Sun</td>
+                            <td>07-04-2024</td>
+                            <td>LSG vs GT</td>
+                            <td>7:30 PM</td>
+                            <td>Lucknow</td>
+                            <td></td>
+                        </tr> 
+                        <tr>
+                            <td>22</td>
+                            <td>Fri</td>
+                            <td>08-04-2024</td>
+                            <td>CSK vs KKR</td>
+                            <td>7:30 PM</td>
+                            <td>Chennai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Sat</td>
+                            <td>09-04-2024</td>
+                            <td>PBKS vs SRH</td>
+                            <td>7:30 PM</td>
+                            <td>Mohali</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Sun</td>
+                            <td>10-04-2024</td>
+                            <td>RR vs GT</td>
+                            <td>7:30 PM</td>
+                            <td>Jaipur</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Mon</td>
+                            <td>11-04-2024</td>
+                            <td>MI vs RCB</td>
+                            <td>7:30 PM</td>
+                            <td>Mumbai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Tue</td>
+                            <td>12-04-2024</td>
+                            <td>LSG vs DC</td>
+                            <td>7:30 PM</td>
+                            <td>Lucknow</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Wed</td>
+                            <td>13-04-2024</td>
+                            <td>PBKS vs RR</td>
+                            <td>7:30 PM</td>
+                            <td>Mohali</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Thu</td>
+                            <td>14-04-2024</td>
+                            <td>KKR vs LSG</td>
+                            <td>3:30 PM</td>
+                            <td>Kolkata</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Thu</td>
+                            <td>14-04-2024</td>
+                            <td>MI vs CSK</td>
+                            <td>7:30 PM</td>
+                            <td>Mumbai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Fri</td>
+                            <td>15-04-2024</td>
+                            <td>RCB vs SRH</td>
+                            <td>7:30 PM</td>
+                            <td>Bengaluru</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Sat</td>
+                            <td>16-04-2024</td>
+                            <td>GT vs DC</td>
+                            <td>7:30 PM</td>
+                            <td>Ahmedabad</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Sun</td>
+                            <td>17-04-2024</td>
+                            <td>KKR vs RR</td>
+                            <td>7:30 PM</td>
+                            <td>Kolkata</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Mon</td>
+                            <td>18-04-2024</td>
+                            <td>PBKS vs MI</td>
+                            <td>7:30 PM</td>
+                            <td>Mohali</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Tue</td>
+                            <td>19-04-2024</td>
+                            <td>LSG vs CSK</td>
+                            <td>7:30 PM</td>
+                            <td>Lucknow</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Wed</td>
+                            <td>20-04-2024</td>
+                            <td>DC vs SRH</td>
+                            <td>7:30 PM</td>
+                            <td>Delhi</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Thu</td>
+                            <td>21-04-2024</td>
+                            <td>KKR vs RCB</td>
+                            <td>3:30 PM</td>
+                            <td>Kolkata</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Thu</td>
+                            <td>21-04-2024</td>
+                            <td>PBKS vs GT</td>
+                            <td>7:30 PM</td>
+                            <td>Mohali</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Fri</td>
+                            <td>22-04-2024</td>
+                            <td>RR vs MI</td>
+                            <td>7:30 PM</td>
+                            <td>Jaipur</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Sat</td>
+                            <td>23-04-2024</td>
+                            <td>CSK vs LSG</td>
+                            <td>7:30 PM</td>
+                            <td>Chennai</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Sun</td>
+                            <td>24-04-2024</td>
+                            <td>DC vs GT</td>
+                            <td>7:30 PM</td>
+                            <td>Delhi</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Mon</td>
+                            <td>25-04-2024</td>
+                            <td>SRH vs RCB</td>
+                            <td>7:30 PM</td>
+                            <td>Hyderabad</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>Tue</td>
+                            <td>26-04-2024</td>
+                            <td>KKR vs PBKS</td>
+                            <td>7:30 PM</td>
+                            <td>Kolkata</td>
+                            <td></td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Wed</td>
+                    <td>27-04-2024</td>
+                    <td>DC vs MI</td>
+                    <td>3:30 PM</td>
+                    <td>Delhi</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Wed</td>
+                    <td>27-04-2024</td>
+                    <td>LSG vs RR</td>
+                    <td>7:30 PM</td>
+                    <td>Lucknow</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Thu</td>
+                    <td>28-04-2024</td>
+                    <td>GT vs RCB</td>
+                    <td>3:30 PM</td>
+                    <td>Ahmedabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Thu</td>
+                    <td>28-04-2024</td>
+                    <td>CSK vs SRH</td>
+                    <td>7:30 PM</td>
+                    <td>Chennai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Fri</td>
+                    <td>29-04-2024</td>
+                    <td>KKR vs DC</td>
+                    <td>7:30 PM</td>
+                    <td>Kolkata</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>Sat</td>
+                    <td>30-04-2024</td>
+                    <td>LSG vs MI</td>
+                    <td>7:30 PM</td>
+                    <td>Lucknow</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>Sun</td>
+                    <td>01-05-2024</td>
+                    <td>CSK vs PBKS</td>
+                    <td>7:30 PM</td>
+                    <td>Chennai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>Mon</td>
+                    <td>02-05-2024</td>
+                    <td>SRH vs RR</td>
+                    <td>7:30 PM</td>
+                    <td>Hyderabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>Tue</td>
+                    <td>03-05-2024</td>
+                    <td>MI vs KKR</td>
+                    <td>7:30 PM</td>
+                    <td>Mumbai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>Wed</td>
+                    <td>04-05-2024</td>
+                    <td>RCB vs GT</td>
+                    <td>7:30 PM</td>
+                    <td>Bengaluru</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>Thu</td>
+                    <td>05-05-2024</td>
+                    <td>PBKS vs CSK</td>
+                    <td>3:30 PM</td>
+                    <td>Dharamsala</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>Thu</td>
+                    <td>05-05-2024</td>
+                    <td>LSG vs KKR</td>
+                    <td>7:30 PM</td>
+                    <td>Lucknow</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>Fri</td>
+                    <td>06-05-2024</td>
+                    <td>MI vs SRH</td>
+                    <td>7:30 PM</td>
+                    <td>Mumbai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>Sat</td>
+                    <td>07-05-2024</td>
+                    <td>DC vs RR</td>
+                    <td>7:30 PM</td>
+                    <td>Delhi</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>Sun</td>
+                    <td>08-05-2024</td>
+                    <td>SRH vs LSG</td>
+                    <td>7:30 PM</td>
+                    <td>Hyderabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>Mon</td>
+                    <td>09-05-2024</td>
+                    <td>PBKS vs RCB</td>
+                    <td>7:30 PM</td>
+                    <td>Dharamasala</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>Tue</td>
+                    <td>10-05-2024</td>
+                    <td>GT vs CSK</td>
+                    <td>7:30 PM</td>
+                    <td>Ahmedabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>Wed</td>
+                    <td>11-05-2024</td>
+                    <td>KKR vs MI</td>
+                    <td>7:30 PM</td>
+                    <td>Kolkata</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>Thu</td>
+                    <td>12-05-2024</td>
+                    <td>CSK vs RR</td>
+                    <td>3:30 PM</td>
+                    <td>Chennai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>62</td>
+                    <td>Thu</td>
+                    <td>12-05-2024</td>
+                    <td>RCB vs DC</td>
+                    <td>7:30 PM</td>
+                    <td>Bengaluru</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>Fri</td>
+                    <td>13-05-2024</td>
+                    <td>GT vs KKR</td>
+                    <td>7:30 PM</td>
+                    <td>Ahmedabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>64</td>
+                    <td>Sat</td>
+                    <td>14-05-2024</td>
+                    <td>DC vs LSG</td>
+                    <td>7:30 PM</td>
+                    <td>Delhi</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>65</td>
+                    <td>Sun</td>
+                    <td>15-05-2024</td>
+                    <td>RR vs PBKS</td>
+                    <td>7:30 PM</td>
+                    <td>Guwahati</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>66</td>
+                    <td>Mon</td>
+                    <td>16-05-2024</td>
+                    <td>SRH vs GT</td>
+                    <td>7:30 PM</td>
+                    <td>Hyderabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>67</td>
+                    <td>Tue</td>
+                    <td>17-05-2024</td>
+                    <td>MI vs LSG</td>
+                    <td>7:30 PM</td>
+                    <td>Mumbai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td>Wed</td>
+                    <td>18-05-2024</td>
+                    <td>RCB vs CSK</td>
+                    <td>7:30 PM</td>
+                    <td>Bengaluru</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>69</td>
+                    <td>Thu</td>
+                    <td>19-05-2024</td>
+                    <td>SRH vs PBKS</td>
+                    <td>3:30 PM</td>
+                    <td>Hyderabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>70</td>
+                    <td>Thu</td>
+                    <td>19-05-2024</td>
+                    <td>RR vs KKR</td>
+                    <td>7:30 PM</td>
+                    <td>Guwahati</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td>Sat</td>
+                    <td>21-05-2024</td>
+                    <td>Qualifier 1</td>
+                    <td>7:30 PM</td>
+                    <td>Ahmedabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>72</td>
+                    <td>Sun</td>
+                    <td>22-05-2024</td>
+                    <td>Eliminator</td>
+                    <td>7:30 PM</td>
+                    <td>Ahmedabad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>73</td>
+                    <td>Tue</td>
+                    <td>24-05-2024</td>
+                    <td>Qualififer 2</td>
+                    <td>7:30 PM</td>
+                    <td>Chennai</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>74</td>
+                    <td>Thu</td>
+                    <td>26-05-2024</td>
+                    <td>Final</td>
+                    <td>7:30 PM</td>
+                    <td>Chennai</td>
+                    <td></td>
+                </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            
+                
+        </section>
+        
+        
+        <section id="news-updates" class="mt-5">
+            <h2 class="text-center mb-3">News Updates</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">IPL 2024 to Be Hosted Exclusively in India, Confirms Mr. Jay Shah</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    In a significant announcement today, Mr. Jay Shah, the Secretary of the Board of Control for Cricket in India (BCCI), confirmed that the upcoming season of the Indian Premier League (IPL) will be exclusively hosted within India. This decision comes amidst speculation regarding the tournament's venues due to the ongoing global situation.
+                                </p>
+                                <p class="card-text">
+                                    Mr. Shah emphasized the board's commitment to ensuring the safety and well-being of players, staff, and fans. He expressed confidence in the robust health protocols put in place to facilitate a successful and memorable IPL season.
+                                </p>
+                                <p class="card-text">
+                                    Cricket enthusiasts can anticipate an electrifying season as the IPL gears up to showcase top-tier cricketing action on Indian soil. Stay tuned for further updates and announcements regarding IPL 2024.
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Date: March 17, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Suryakumar Yadav Set to Miss Initial Matches of IPL 2024</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Mumbai Indians' fans may have to wait a little longer to see Suryakumar Yadav's magic on the field as the dynamic batsman is slated to miss the first two matches of IPL 2024. Sources close to the team reveal that Yadav is undergoing a brief period of rest to recover from a minor niggle.
+                                </p>
+                                <p class="card-text">
+                                    While his absence is a setback for the team, the management remains optimistic about his swift return to action. Fans eagerly await Yadav's explosive performances once he rejoins the squad.
+                                </p>
+                                <p class="card-text">
+                                    Stay tuned for updates on Suryakumar Yadav's recovery and his anticipated comeback in the IPL arena.
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Date: March 17, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Lungi Ngidi Ruled Out of IPL 2024; Jake McGuire Steps In</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Chennai Super Kings face a setback as South African pacer Lungi Ngidi has been ruled out of IPL 2024 due to unforeseen circumstances. However, the team swiftly addressed the situation by roping in the talented Australian all-rounder, Jake McGuire, as Ngidi's replacement.
+                                </p>
+                                <p class="card-text">
+                                    McGuire's inclusion adds depth to the squad and presents exciting possibilities for the team's bowling department. Fans eagerly anticipate his debut in the IPL and the impact he will bring to the table.
+                                </p>
+                                <p class="card-text">
+                                    Stay tuned for more updates on team compositions and developments ahead of IPL 2024.
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Date: March 17, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Players Flock to Teams' Practice Sessions with Only 5 Days Left for IPL Kickoff</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    With just five days remaining until the commencement of the IPL 2024 season, excitement reaches fever pitch as players from all teams swarm to their respective practice sessions. The air is charged with anticipation as star cricketers and emerging talents alike gear up to showcase their skills on cricket's grandest stage.
+                                </p>
+                                <p class="card-text">
+                                    From power-packed batting drills to precision bowling sessions, teams are leaving no stone unturned in their preparations for the upcoming battles. The camaraderie amongst players and the intensity of training sessions serve as a testament to the competitive spirit that defines the IPL.
+                                </p>
+                                <p class="card-text">
+                                    As fans eagerly await the spectacle that awaits, stay tuned for exclusive insights, player interviews, and behind-the-scenes coverage leading up to the IPL extravaganza.
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Date: March 17, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Injury Concerns Arise as Some Players Sustain Minor Injuries</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    As the IPL 2024 draws closer, concerns emerge as reports surface of some players sustaining minor injuries during practice sessions. While details are scarce at the moment, teams are actively monitoring the situation, and updates are expected to be provided shortly.
+                                </p>
+                                <p class="card-text">
+                                    With the tournament fast approaching, the fitness of key players is paramount. Fans are advised to stay tuned to the official IPL website for the latest updates on player injuries and their potential impact on team compositions.
+                                </p>
+                                <p class="card-text">
+                                    Let's hope for a swift recovery for all injured players as they strive to make their mark in the upcoming IPL season.
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Date: March 17, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Conway Ruled Out of IPL Due to Injury</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Unfortunately, news has arrived that Devon Conway, the talented cricketer from New Zealand, has been ruled out of the IPL (Indian Premier League) due to an injury sustained during practice sessions. Conway, known for his exquisite batting technique, was anticipated to play a crucial role in this season's IPL. However, his absence will be felt by his team and fans alike.
+                                </p>
+                                <p class="card-text">
+                                    The medical team has advised him to undergo rehabilitation, and it is expected that he will return to action soon. The team management wishes him a speedy recovery and hopes to see him back on the field stronger than ever.
+                                </p>
+                                <p class="card-text">
+                                    Stay tuned for further updates on Conway's recovery and IPL developments.
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Date: March 5, 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    <!-- Footer -->
+    <footer class="footer mt-5 py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2024 IPL Fan Zone. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (optional, if you need Bootstrap's JavaScript features) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <!-- Fetch and update content using JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Function to fetch live scores from the API
+        async function updateLiveScores() {
+            const apiKey = '568aa53a-d479-4c4f-afb1-aa417b994a7d';
+            const apiUrl = `https://api.cricapi.com/v1/cricScore?apikey=${apiKey}`;
+    
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+    
+                if (data && data.matchStarted && data.score) {
+                    const liveScoresContent = document.querySelector('#live-scores .card-body');
+                    const lastUpdatedTime = new Date().toLocaleTimeString();
+    
+                    liveScoresContent.innerHTML = `
+                        <h5 class="card-title">Match: ${data["team-1"]} vs ${data["team-2"]}</h5>
+                        <p class="card-text">Team ${data["team-1"]}: ${data.score}</p>
+                        <p class="card-text">Team ${data["team-2"]}: ${data.score}</p>
+                    `;
+                    document.getElementById('last-updated-time').innerText = lastUpdatedTime;
+                } else {
+                    const liveScoresContent = document.querySelector('#live-scores .card-body');
+                    liveScoresContent.innerHTML = '<p class="card-text">No live scores available.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching live scores:', error);
+            }
+        }
+    
+        // Call function to update live scores
+        updateLiveScores();
+        // Optionally, set a timer to update live scores periodically
+        setInterval(updateLiveScores, 60000); // Update every 60 seconds (adjust as needed)
+    
+        
+    
+            // Filter functionality
+            $('#filterBtn').click(function () {
+                var venue = $('#venueFilter').val();
+                var team = $('#teamFilter').val();
+    
+                $('#match-schedule-content tr').each(function () {
+                    var rowVenue = $(this).find('td:eq(5)').text();
+                    var rowTeam1 = $(this).find('td:eq(3)').text().split(' vs ')[0];
+                    var rowTeam2 = $(this).find('td:eq(3)').text().split(' vs ')[1];
+                    if ((venue === 'All' || rowVenue === venue) && (team === 'All' || rowTeam1 === team || rowTeam2 === team)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        
+    </script>
+    
+</body>
+</html>
